@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /img/
+Allow: /
+
+Sitemap: https://www.jouwwebsite.nl/sitemap.xml
