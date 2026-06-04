@@ -1,0 +1,838 @@
+/* =============================================
+   BASHAR PORTFOLIO — style.css
+   ============================================= */
+
+/* ── VARIABELEN ── */
+:root {
+    --donkerblauw: #1a2942;
+    --groen: #3d7a6b;
+    --lichtgroen: #2d6a5b;
+    --rood: #b93030;
+    --blauw-knop: #1a6bbf;
+    --wit: #ffffff;
+    --lichtgrijs: #f0f2f5;
+    --grijs: #e0e4ec;
+    --tekst: #1a2942;
+    --tekst-zacht: #4a5568;
+    --tekst-grijs: #888888;
+    --rand: #dde3ef;
+    --radius: 10px;
+    --schaduw: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* ── RESET ── */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--tekst);
+    line-height: 1.7;
+    background: var(--wit);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* =============================================
+   NAVIGATIE — sticky, gecentreerde links
+   ============================================= */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--lichtgrijs);
+    display: grid;
+    grid-template-columns: 120px 1fr 120px;
+    align-items: center;
+    padding: 0 3%;
+    height: 64px;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Logo links */
+.nav-logo img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Links gecentreerd in het midden */
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: rgba(0, 0, 0, 0.75);
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 4px 2px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #ec7310;
+}
+
+/* Actieve link bij scrollen — verandert van kleur */
+.nav-links a.actief {
+    color: #ec7310;
+    border-bottom: 2px solid #ec7310;
+    font-weight: 700;
+}
+
+/* Hamburger — verborgen op desktop */
+.nav-toggle {
+    display: none;
+}
+
+.nav-hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    justify-self: end;
+}
+
+.nav-hamburger span {
+    width: 24px;
+    height: 2px;
+    background: #000000;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+
+/* =============================================
+   SECTIE BASISSTIJLEN
+   ============================================= */
+.sectie-grijs {
+    background: #d9d9d9;
+    padding: 60px 5%;
+}
+
+.sectie-donker {
+    background: #44628B;
+    padding: 60px 5%;
+}
+
+.sectie-wit {
+    background: #d9d9d9;
+    padding: 60px 5%;
+}
+
+.sectie-rood {
+    background: #44628B;
+    padding: 60px 5%;
+}
+
+.sectie-kop {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--donkerblauw);
+    margin-bottom: 6px;
+}
+
+.sectie-kop.wit {
+    color: var(--wit);
+}
+
+.sectie-ondertitel {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #000000;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+}
+
+.sectie-ondertitel.geel {
+    color: #ffffff;
+}
+
+.sectie-ondertitel.licht {
+    color: rgb(255, 255, 255);
+}
+
+/* =============================================
+   HOME — volledige achtergrondafbeelding
+   ============================================= */
+.sectie-home {
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* Donkere overlay zodat tekst leesbaar blijft */
+.home-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 20, 40, 0.60);
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.home-inhoud {
+    max-width: 600px;
+}
+
+.home-inhoud h1 {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: var(--wit);
+    margin-bottom: 14px;
+    line-height: 1.2;
+}
+
+.home-inhoud p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.82);
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+
+.home-knoppen {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.knop-groen {
+    background: #299b80;
+    color: var(--wit);
+    padding: 12px 26px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.92rem;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.knop-groen:hover {
+    background: #2d5a4d;
+    transform: translateY(-2px);
+}
+
+.knop-blauw {
+    background: var(--blauw-knop);
+    color: var(--wit);
+    padding: 12px 26px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.92rem;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.knop-blauw:hover {
+    background: #145299;
+    transform: translateY(-2px);
+}
+
+.home-social {
+    display: flex;
+    gap: 10px;
+}
+
+.social-knop {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--wit);
+    transition: background 0.2s;
+}
+
+.social-knop:hover {
+    background: var(--groen);
+}
+
+/* =============================================
+   OVER MIJ
+   ============================================= */
+.over-grid {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 3rem;
+    align-items: start;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.over-links {
+    text-align: center;
+}
+
+.over-foto img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--groen);
+    margin: 0 auto 14px;
+}
+
+.over-naam {
+    font-weight: 800;
+    font-size: 1rem;
+    color: var(--donkerblauw);
+    margin-bottom: 4px;
+}
+
+.over-rol {
+    font-size: 0.99rem;
+    color: #ec7310;
+    font-weight: 600;
+}
+
+/* Tekstvak met rand en achtergrond — zoals in het ontwerp */
+.over-tekstvak {
+    background: #b6f0f77a;
+    border: 1px solid var(--grijs);
+    border-radius: var(--radius);
+    padding: 1.8rem;
+    box-shadow: var(--schaduw);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.over-tekstvak p {
+    color: #000000;
+    font-size: 0.92rem;
+    line-height: 1.75;
+}
+
+/* =============================================
+   KENNIS & VAARDIGHEDEN
+   ============================================= */
+.vaardigheden-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.vaardigheid-kaart {
+    background: rgba(255, 255, 255, 0.189);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+}
+
+.vaardigheid-kaart h3 {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.vaardigheid-kaart ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.vaardigheid-kaart ul li {
+    background: rgba(255, 255, 255, 0.12);
+    color: rgba(255, 255, 255, 0.88);
+    padding: 5px 14px;
+    border-radius: 100px;
+    font-size: 0.82rem;
+}
+
+/* =============================================
+   OPLEIDINGEN
+   ============================================= */
+.opleidingen-lijst {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.opleiding-kaart {
+    background: #b6f0f77a;
+    border-radius: var(--radius);
+    padding: 1.5rem 1.8rem;
+    border-left: 4px solid var(--groen);
+    box-shadow: var(--schaduw);
+}
+
+.opleiding-periode {
+    font-size: 0.78rem;
+    color: var(--groen);
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.opleiding-kaart h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--donkerblauw);
+    margin-bottom: 4px;
+}
+
+.opleiding-school {
+    font-size: 0.85rem;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.diploma-rij {
+    font-size: 0.8rem;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.badge-bezig {
+    background: #fef3c7;
+    color: #92400e;
+    padding: 2px 10px;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.badge-ja {
+    background: #d1fae5;
+    color: #065f46;
+    padding: 2px 10px;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+/* =============================================
+   WERKERVARING
+   ============================================= */
+.werk-leeg {
+    background: rgba(255, 255, 255, 0.189);
+    border-radius: var(--radius);
+    padding: 2rem;
+    text-align: center;
+    border: 2px dashed rgba(255, 255, 255, 0.3);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.werk-leeg p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.92rem;
+}
+
+/* =============================================
+   MIJN PROJECTEN
+   ============================================= */
+.projecten-lijst {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.project-kaart {
+    background: var(--wit);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--schaduw);
+    border: 1px solid var(--grijs);
+}
+
+/* Projectafbeelding — volledige breedte boven de kaart */
+.project-foto {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.project-inhoud {
+    padding: 1.5rem;
+}
+
+.project-inhoud h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--donkerblauw);
+    margin-bottom: 8px;
+}
+
+.project-inhoud p {
+    font-size: 0.88rem;
+    color: var(--tekst-zacht);
+    line-height: 1.65;
+    margin-bottom: 14px;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech-tag {
+    background: #6f9bd7;
+    color: var(--donkerblauw);
+    padding: 4px 12px;
+    border-radius: 100px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    border: 1px solid var(--grijs);
+}
+
+.knop-project {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 9px 20px;
+    background: #299b80;
+    color: var(--wit);
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    transition: background 0.2s;
+}
+
+.knop-project:hover {
+    background: var(--groen);
+}
+
+/* =============================================
+   NEEM CONTACT OP
+   ============================================= */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 3rem;
+    max-width: 900px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+/* Linker kant: meer tbastand tussen de items */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-left: 1rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.contact-icoon {
+    width: 42px;
+    height: 42px;
+    border-radius: 9px;
+    background: var(--donkerblauw);
+    color: var(--wit);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.contact-tekst {
+    color: var(--wit);
+    font-size: 0.92rem;
+}
+
+/* Rechter kant: formulier */
+.contact-formulier {
+    background: var(--wit);
+    border-radius: var(--radius);
+    padding: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.formulier-groep {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.formulier-groep label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--donkerblauw);
+}
+
+.formulier-groep input,
+.formulier-groep textarea {
+    padding: 10px 14px;
+    border-radius: 7px;
+    border: 1.5px solid var(--rand);
+    font-family: inherit;
+    font-size: 0.88rem;
+    background: var(--lichtgrijs);
+    transition: border-color 0.2s;
+}
+
+.formulier-groep input:focus,
+.formulier-groep textarea:focus {
+    outline: none;
+    border-color: var(--groen);
+}
+
+.formulier-groep textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.knop-versturen {
+    width: 100%;
+    padding: 12px;
+    background: var(--donkerblauw);
+    color: var(--wit);
+    border: none;
+    border-radius: 8px;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.knop-versturen:hover {
+    background: var(--groen);
+}
+
+/* =============================================
+   FOOTER
+   ============================================= */
+.footer {
+    background: var(--lichtgrijs);
+    border-top: 1px solid var(--grijs);
+    padding: 24px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-logo img {
+    height: 45px;
+    width: auto;
+    object-fit: contain;
+}
+
+.footer-nav ul {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.footer-nav a {
+    color: black;
+    font-size: 0.82rem;
+    transition: color 0.2s;
+}
+
+.footer-nav a:hover {
+    color: #ec7310;
+}
+
+.footer-social {
+    display: flex;
+    gap: 8px;
+}
+
+.footer-social a {
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    background: var(--grijs);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--donkerblauw);
+    transition: background 0.2s, color 0.2s;
+}
+
+.footer-social a:hover {
+    background: var(--groen);
+    color: var(--wit);
+}
+
+.footer-tekst {
+    width: 100%;
+    text-align: center;
+    font-size: 0.78rem;
+    color: rgb(0, 0, 0);
+}
+
+/* =============================================
+   RESPONSIVE — TABLET (max 900px)
+   ============================================= */
+@media (max-width: 900px) {
+
+    .navbar {
+        grid-template-columns: 100px 1fr 40px;
+    }
+
+    .over-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .over-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .vaardigheden-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 2;
+        padding-left: 500px;
+    }
+}
+
+/* =============================================
+   RESPONSIVE — MOBIEL (max 600px)
+   ============================================= */
+@media (max-width: 600px) {
+
+    /* Nav: hamburger zichtbaar, links verborgen */
+    .navbar {
+        grid-template-columns: 80px 1fr 40px;
+        padding: 0 4%;
+    }
+
+    .nav-hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        width: 100%;
+        background: #d9d9d9;
+        flex-direction: column;
+        gap: 0;
+        padding: 8px 0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-links li a {
+        display: block;
+        padding: 13px 5%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .nav-toggle:checked~.nav-links {
+        display: flex;
+    }
+
+    /* Home */
+    .home-inhoud h1 {
+        font-size: 1.7rem;
+    }
+
+    /* Secties */
+    .sectie-grijs,
+    .sectie-donker,
+    .sectie-wit,
+    .sectie-rood {
+        padding: 40px 5%;
+    }
+
+    .sectie-kop {
+        font-size: 1.4rem;
+    }
+
+    /* Vaardigheden */
+    .vaardigheden-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact */
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding-left: 1rem;
+        padding-top: 3rem;
+    }
+
+    /* Footer */
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-nav ul {
+        justify-content: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+}
+
+.over-foto-placeholder {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid var(--groen);
+    margin: 0 auto 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    background: var(--lichtgrijs);
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Contact</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="page-header contact-header">
+    <div class="page-title">Contact</div>
+  </header>
+
+  <nav class="navbar">
+    <a href="https://www.techniekcollegerotterdam.nl">
+      <img src="img/TCR logo.webp" width="120" height="50" alt="Logo"></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="overmij.html">Over mij</a></li>
+      <li><a href="bsa.html">BSA</a></li>
+      <li><a href="examenplan.html">Examenplan</a></li>
+      <li class="dropdown">
+        <a href="canvas.html">Canvas &#9662;</a>
+        <ul class="dropdown-content">
+          <li><a href="canvas.html#leerdoelen">Leerdoelen</a></li>
+          <li><a href="canvas.html#planning">Planning</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="form-container">
+      <h2>Neem contact met mij op</h2>
+      <form action="#" method="post">
+        <label for="voornaam">Voornaam:</label>
+        <input type="text" id="voornaam" name="voornaam" placeholder="Vul hier uw voornaam in!" pattern="[A-Za-zÀ-ÿ\s]+"
+          required>
+
+        <label for="achternaam">Achternaam:</label>
+        <input type="text" id="achternaam" name="achternaam" placeholder="Vul hier uw achternaam in!"
+          pattern="[A-Za-zÀ-ÿ\s]+" required>
+
+        <label for="telefoon">Telefoon:</label>
+        <input type="tel" id="telefoon" name="telefoon" placeholder="Vul hier uw telefoon in!" pattern="[0-9]{10}"
+          maxlength="10" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="Vul hier uw e-mail adres in!"
+          pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$" required>
+
+        <label for="onderwerp">Onderwerp:</label>
+        <select id="onderwerp" name="onderwerp" required>
+          <option value="" disabled selected hidden>Kies een onderwerp</option>
+          <option value="vraag">Vraag</option>
+          <option value="feedback">Feedback</option>
+          <option value="afspraak">Afspraak</option>
+        </select>
+
+        <label for="bericht">Bericht:</label>
+        <textarea id="bericht" name="bericht" rows="5" placeholder="Vul hier uw bericht in!" required></textarea>
+
+        <input type="submit" value="Verzenden">
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-logo">
+        <a href="https://www.techniekcollegerotterdam.nl">
+          <img src="img/TCR logo.webp" width="120" height="50" alt="TCR logo">
+        </a>
+      </div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="overmij.html">Over mij</a></li>
+        <li><a href="bsa.html">BSA</a></li>
+        <li><a href="examenplan.html">Examenplan</a></li>
+        <li><a href="canvas.html">Canvas</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <p class="copyright">© 2025 Techniek College Rotterdam</p>
+  </footer>
+
+</body>
+
+</html>

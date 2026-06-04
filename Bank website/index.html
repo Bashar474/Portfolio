@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank van de Toekomst</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/BVDT.png" alt="Logo" class="logo-img">
+        </div>
+        <nav id="mainNav">
+            <a href="#home" onclick="toonPagina('home')" id="homeLink" class="verborgen">Home</a>
+            <a href="#rekeningen" onclick="toonPagina('rekeningen')" id="rekeningenLink"
+                class="verborgen">Rekeningen</a>
+            <a href="#overschrijvingen" onclick="toonPagina('overschrijvingen')" id="overschrijvingenLink"
+                class="verborgen">Overschrijvingen</a>
+            <a href="#beleggingen" onclick="toonPagina('beleggingen')" id="beleggingenLink"
+                class="verborgen">Beleggingen</a>
+            <a href="#crypto" onclick="toonPagina('crypto')" id="cryptoLink" class="verborgen">Crypto</a>
+            <a href="#dashboard" onclick="toonPagina('dashboard')" id="dashboardLink" class="verborgen">Dashboard</a>
+        </nav>
+        <div id="authButtons">
+            <button class="auth-btn login-btn" onclick="toonPagina('login')" id="loginBtn">Login</button>
+            <button class="auth-btn logout-btn" onclick="uitloggen()" id="logoutBtn"
+                class="verborgen">Uitloggen</button>
+        </div>
+    </header>
+
+    <div id="homePage" class="page">
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>De nummer 1 online zakelijke rekening in Europa</h1>
+                <p>Open uw zakelijke rekening met Nederlandse IBAN in 5 minuten. 100% digitaal, veilig en transparant.
+                </p>
+                <div class="hero-actions">
+                    <button class="qonto-btn-primary">Open een rekening</button>
+                    <button class="qonto-btn-secondary">Spreek met een expert</button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <img src="img/BVDT.png" alt="Hero Image" class="hero-img">
+            </div>
+        </section>
+        <section class="info-section">
+            <div class="info-card">
+                <h3><span>💳</span> Een zakelijke rekening voor elk budget</h3>
+                <p>Kies het pakket dat bij uw bedrijf past, van start-up tot gevestigde onderneming.</p>
+            </div>
+            <div class="info-card">
+                <h3><span>🛡️</span> Jouw veiligheid is onze prioriteit</h3>
+                <p>Gecertificeerd bankieren met de nieuwste beveiligingstechnologieën en 24/7 monitoring.</p>
+            </div>
+            <div class="info-card">
+                <h3><span>📈</span> Zoveel meer dan een rekening</h3>
+                <p>Beheer uw uitgaven, factureer klanten en investeer in crypto, alles in één app.</p>
+            </div>
+        </section>
+    </div>
+
+    <div id="loginPage" class="page verborgen">
+        <div class="login-container">
+            <h1>Inloggen</h1>
+            <form id="loginForm">
+                <label>Gebruikersnaam:</label>
+                <input type="text" id="username" required>
+                <label>Wachtwoord:</label>
+                <input type="password" id="password" required>
+                <button type="submit">Inloggen</button>
+                <div id="errorMessage" class="feedback verborgen"></div>
+            </form>
+        </div>
+    </div>
+
+    <div id="dashboardPage" class="page verborgen">
+        <h1 class="welcome-msg">Welkom, <span id="userName"></span>!</h1>
+        <div class="container">
+            <h1 class="transaction-title"><span>📜</span> Transactiegeschiedenis</h1>
+            <div class="filters">
+                <div class="filters-left">
+                    <label>Filter op type:</label>
+                    <select id="filter-type">
+                        <option value="all">Alle</option>
+                        <option value="inkomend">Inkomend</option>
+                        <option value="uitgaand">Uitgaand</option>
+                    </select>
+                </div>
+                <div class="filters-center">
+                    <label>Filter op datum:</label>
+                    <input type="date" id="filter-datum">
+                </div>
+                <div class="filters-right">
+                    <button onclick="filterTransacties()">Filteren</button>
+                </div>
+            </div>
+            <div id="transaction-list"></div>
+        </div>
+    </div>
+
+    <div id="rekeningenPage" class="page verborgen">
+        <div class="rekeningen-container">
+            <section class="form-section rekeningen-form">
+                <h2 class="rekeningen-title"><span>🏦</span> Uw Rekeningen</h2>
+                <div id="accountsList" class="accounts-list"></div>
+                <button class="nieuwe-rekening-btn" onclick="maakNieuweRekening()">Nieuwe Rekening Aanmaken</button>
+            </section>
+        </div>
+    </div>
+
+    <div id="overschrijvingenPage" class="page verborgen">
+        <section class="form-section overschrijven-form">
+            <h2 class="overschrijven-title"><span>💸</span> Geld Overschrijven</h2>
+            <form id="overschrijvingForm">
+                <label>Van rekening:</label>
+                <select id="vanRekening" required>
+                    <option value="">kies een rekening</option>
+                </select>
+                <label>Naar rekening:</label>
+                <select id="naarRekening" required>
+                    <option value="">kies een rekening</option>
+                </select>
+                <label>Bedrag:</label>
+                <input type="number" id="bedrag" placeholder="€0.00" min="0.01" step="0.01" required>
+                <button type="submit">Overschrijven</button>
+            </form>
+            <div id="feedbackMessage" class="feedback verborgen"></div>
+        </section>
+    </div>
+
+    <div id="beleggingenPage" class="page verborgen">
+        <div class="beleggingen-container">
+            <h1><span>📊</span> Beleggingen</h1>
+            <div id="beleggingen-overzicht" class="investerings-lijst"></div>
+            <div class="investerings-form">
+                <label for="aandeel">Kies een aandeel:</label>
+                <select id="aandeel">
+                    <option>Tesla inc</option>
+                    <option>Ayden N.V</option>
+                    <option>GreenEnergy</option>
+                </select>
+                <label>Bedrag (in €):</label>
+                <input type="number" id="aandeel-amount" placeholder="€0.00" min="0.01" step="0.01" required>
+                <button onclick="verwerkTransactie('aandeel', 'koop')" class="action-btn">Kopen</button>
+                <button onclick="verwerkTransactie('aandeel', 'verkoop')" class="action-btn">Verkopen</button>
+            </div>
+            <div id="belegging-message" class="feedback verborgen"></div>
+        </div>
+    </div>
+
+    <div id="cryptoPage" class="page verborgen">
+        <div class="crypto-card">
+            <h1 class="crypto-title"><span>₿</span> Cryptovaluta Overzicht</h1>
+            <div id="crypto-status-list"></div>
+            <div class="crypto-form">
+                <label>Kies een cryptovaluta:</label>
+                <select id="crypto-select">
+                    <option value="Bitcoin">Bitcoin</option>
+                    <option value="Ethereum">Ethereum</option>
+                    <option value="Litecoin">Litecoin</option>
+                </select>
+                <label>Bedrag (in €):</label>
+                <input type="number" id="crypto-amount" placeholder="€0.00" min="0.01" step="0.01" required>
+                <button onclick="verwerkTransactie('crypto', 'koop')" class="crypto-btn">Kopen</button>
+                <button onclick="verwerkTransactie('crypto', 'verkoop')" class="crypto-btn">Verkopen</button>
+            </div>
+            <div id="crypto-message" class="feedback verborgen"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Bank van de Toekomst. Alle rechten voorbehouden.</p>
+            <div class="footer-links">
+                <a href="#">Privacybeleid</a> | <a href="#">Voorwaarden</a> | <a href="#">Contact</a>
+            </div>
+        </div>
+    </footer>
+    <script src="app.js"></script>
+</body>
+
+</html>

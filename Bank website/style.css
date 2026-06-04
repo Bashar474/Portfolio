@@ -1,0 +1,465 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d7d5c8;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #084479;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-img {
+    height: 40px;
+    width: 150px;
+    display: block;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 15px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #463e3e;
+}
+
+nav a.active {
+    background-color: #000;
+    color: #fff;
+}
+
+.auth-btn {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.login-btn {
+    background-color: rgb(37, 180, 37);
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
+
+.login-btn:hover {
+    background-color: #4a4a4a;
+}
+
+.logout-btn {
+    background-color: #e73b3b;
+    color: #fff;
+}
+
+.logout-btn:hover {
+    background-color: #d00c0c;
+}
+
+.hero-section {
+    background-color: #000;
+    color: #fff;
+    padding: 80px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: #ccc;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.qonto-btn-primary,
+.qonto-btn-secondary {
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.qonto-btn-primary {
+    background-color: #fff;
+    color: #000;
+    border: none;
+}
+
+.qonto-btn-secondary {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.hero-img {
+    max-width: 100%;
+    height: 150px;
+    object-fit: contain;
+}
+
+.info-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 60px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.info-card {
+    background-color: #c6e3f2;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.info-card h3 {
+    color: #f79103;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-section {
+    background-color: #c6e3f2;
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+.overschrijven-form {
+    padding: 50px;
+}
+
+.rekeningen-form {
+    max-width: 800px;
+}
+
+.overschrijven-title,
+.rekeningen-title,
+.transaction-title,
+.crypto-title,
+.beleggingen-container h1 {
+    text-align: center;
+    color: #f79103;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.welcome-msg {
+    text-align: center;
+    margin: 50px auto 40px;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+select,
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+button {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.feedback {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.feedback.success {
+    color: #28a745;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+
+.feedback.error {
+    color: #dc3545;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    font-size: 14px;
+}
+
+.accounts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.account-item {
+    background-color: #e9ecef;
+    border-radius: 50px;
+    padding: 20px 30px;
+    display: grid;
+    grid-template-columns: 180px 1fr 140px;
+}
+
+.account-type,
+.account-balance {
+    font-weight: bold;
+    color: #495057;
+}
+
+.account-number {
+    color: #495057;
+    text-align: center;
+    font-family: monospace;
+}
+
+.nieuwe-rekening-btn {
+    border-radius: 50px;
+    padding: 18px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #c6e3f2;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.filters-left,
+.filters-center,
+.filters-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+}
+
+.filters select,
+.filters input {
+    padding: 7px 18px;
+    margin-bottom: 4px;
+}
+
+.filters button {
+    padding: 7px 18px;
+    margin-bottom: 11px;
+}
+
+.transaction {
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.positief {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.negatief {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.geen-resultaten {
+    color: #dc3545;
+    text-align: center;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.login-container {
+    max-width: 480px;
+    background-color: #c6e3f2;
+    padding: 50px 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 80px auto;
+}
+
+.login-container h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #f79103;
+    font-size: 32px;
+}
+
+.success-icon,
+.error-icon {
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin: 0 auto 15px auto;
+}
+
+.beleggingen-container,
+.crypto-card {
+    max-width: 700px;
+    margin: 40px auto;
+    background-color: #c6e3f2;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.saldo {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.saldo,
+.p {
+    color: #28a745;
+}
+
+.crypto-status-item,
+.aandeel-item {
+    background-color: #5cbe533d;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: color 0.5s ease;
+}
+
+@keyframes groen {
+    0% {
+        color: #28a745;
+    }
+
+    100% {
+        color: inherit;
+    }
+}
+
+@keyframes rood {
+    0% {
+        color: #dc3545;
+    }
+
+    100% {
+        color: inherit;
+    }
+}
+
+.prijs-omhoog {
+    animation: groen 1s ease;
+}
+
+.prijs-omlaag {
+    animation: rood 1s ease;
+}
+
+.crypto-btn,
+.action-btn {
+    background-color: #007bff;
+}
+
+.crypto-btn:hover,
+.action-btn:hover {
+    background-color: #0056b3;
+}
+
+.crypto-message {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #28a745;
+}
+
+footer {
+    background-color: #1a1a1a;
+    color: #888;
+    padding: 30px 50px;
+    text-align: center;
+    margin-top: auto;
+}
+
+.footer-links a {
+    color: #888;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+.verborgen {
+    display: none !important;
+}
