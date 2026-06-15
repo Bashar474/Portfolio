@@ -26,82 +26,84 @@
 <body>
 
     <!-- ===================== NAVIGATIE ===================== -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-logo">
-            <!-- Lighthouse Oplossing: width en height toegevoegd -->
-            <img src="img/logo.png" alt="Mijn Logo" width="120" height="40">
-        </div>
+    <header class="site-header">
+        <nav class="navbar" id="navbar" aria-label="Hoofd navigatie">
+            <a class="nav-logo" href="#home">
+                <!-- Lighthouse Oplossing: width en height toegevoegd -->
+                <img src="img/logo.png" alt="Logo Bashar portfolio" width="120" height="40">
+            </a>
 
-        <input type="checkbox" id="nav-toggle" class="nav-toggle">
-        <!-- W3C Oplossing: aria-label verwijderd omdat 'for' al gekoppeld is -->
-        <label for="nav-toggle" class="nav-hamburger">
-            <span></span><span></span><span></span>
-        </label>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-hamburger" aria-label="Open navigatiemenu">
+                <span></span><span></span><span></span>
+            </label>
 
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#over">Over</a></li>
-            <li><a href="#vaardigheden">Vaardigheden</a></li>
-            <li><a href="#opleidingen">Opleidingen</a></li>
-            <li><a href="#projecten">Projecten</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#over">Over</a></li>
+                <li><a href="#vaardigheden">Vaardigheden</a></li>
+                <li><a href="#opleidingen">Opleidingen</a></li>
+                <li><a href="#projecten">Projecten</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
 
         <!-- ===== HOME ===== -->
         <section id="home" class="sectie-home" style="background-image: url('img/Home.jpg');">
-            <div class="home-overlay">
-                <div class="home-inhoud">
+            <section class="home-overlay">
+                <article class="home-inhoud">
                     <h1>Hi, ik ben Bashar</h1>
                     <p>Eerstejaars student Software Development aan het <br> Techniek College Rotterdam, bezig met het
                         leren <br>
                         bouwen van moderne websites en applicaties.</p>
-                    <div class="home-knoppen">
+                    <nav class="home-knoppen" aria-label="Startpagina acties">
                         <a href="#contact" class="knop-groen">Neem Contact Op</a>
                         <a href="#projecten" class="knop-blauw">Bekijk Projecten</a>
-                    </div>
-                    <div class="home-social">
+                    </nav>
+                    <aside class="home-social" aria-label="Social media links">
                         <a href="https://github.com/Bashar474" class="social-knop" aria-label="GitHub">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                                 <path
                                     d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
                             </svg>
                         </a>
-                    </div>
-                </div>
-            </div>
+                    </aside>
+                </article>
+            </section>
         </section>
 
         <!-- ===== OVER MIJ ===== -->
         <section id="over" class="sectie-grijs">
             <!-- W3C Oplossing: p tag veranderd naar h2 tag voor correcte structuur -->
             <h2 class="sectie-ondertitel">Wie ben ik?</h2>
-            <div class="over-grid">
-                <div class="over-links">
-                    <div class="over-foto">
-                        <div class="over-foto-placeholder">🖼️</div>
-                    </div>
+            <section class="over-grid">
+                <aside class="over-links">
+                    <figure class="over-foto">
+                        <span class="over-foto-placeholder" aria-hidden="true">🖼️</span>
+                        <figcaption class="sr-only">Profiel foto placeholder</figcaption>
+                    </figure>
                     <p class="over-naam">Hallo! Ik ben Bashar</p>
                     <p class="over-rol">Software Developer Student</p>
-                </div>
-                <div class="over-tekstvak">
+                </aside>
+                <article class="over-tekstvak">
                     <p>Ik ben momenteel eerstejaars student Software Development MBO 4 BOL aan het Techniek College
                         Rotterdam. Ik ben net begonnen met mijn opleiding en leer elke dag nieuwe dingen, zoals HTML,
                         CSS en het bouwen van websites.</p>
                     <p>Ik ben iemand die graag problemen oplost en uitdagingen aangaat. In mijn opleiding werk ik aan
                         praktijkgerichte projecten, zoals het bouwen van een eigen portfolio website.</p>
                     <p>Mijn doel is om stap voor stap een goede software developer te worden.</p>
-                </div>
-            </div>
+                </article>
+            </section>
         </section>
 
         <!-- ===== KENNIS & VAARDIGHEDEN ===== -->
         <section id="vaardigheden" class="sectie-donker">
             <!-- W3C Oplossing: p tag veranderd naar h2 tag -->
             <h2 class="sectie-ondertitel geel">Wat kan ik?</h2>
-            <div class="vaardigheden-grid">
+            <section class="vaardigheden-grid">
                 <article class="vaardigheid-kaart">
                     <h3>Frontend</h3>
                     <ul>
@@ -125,14 +127,14 @@
                         <li>VS Code</li>
                     </ul>
                 </article>
-            </div>
+            </section>
         </section>
 
         <!-- ===== OPLEIDINGEN ===== -->
         <section id="opleidingen" class="sectie-wit">
             <!-- W3C Oplossing: p tag veranderd naar h2 tag -->
             <h2 class="sectie-ondertitel">Mijn achtergrond?</h2>
-            <div class="opleidingen-lijst">
+            <section class="opleidingen-lijst">
                 <article class="opleiding-kaart">
                     <p class="opleiding-periode">2025 &ndash; Heden</p>
                     <h3>Software Developer Niveau 4</h3>
@@ -145,112 +147,116 @@
                     <p class="opleiding-school">AL-Orouba School</p>
                     <p class="diploma-rij">Diploma: <span class="badge-ja">&#10003; Ja</span></p>
                 </article>
-            </div>
+            </section>
         </section>
 
         <!-- ===== WERKERVARING ===== -->
         <section id="werkervaring" class="sectie-donker">
             <!-- W3C Oplossing: p tag veranderd naar h2 tag -->
             <h2 class="sectie-ondertitel licht">Mijn ervaring</h2>
-            <div class="werk-leeg">
+            <article class="werk-leeg">
                 <p>Geen werkervaring op dit moment. Op zoek naar een stage.</p>
-            </div>
+            </article>
         </section>
 
         <!-- ===== MIJN PROJECTEN ===== -->
         <section id="projecten" class="sectie-grijs">
             <h2 class="sectie-ondertitel">Wat heb ik gemaakt?</h2>
-            <div class="projecten-lijst">
+            <section class="projecten-lijst">
                 <article class="project-kaart">
-
-                    <img src="img/project1.png" alt="Ouderavond Website" class="project-foto" width="400" height="250"
-                        loading="lazy">
-                    <div class="project-inhoud">
+                    <figure>
+                        <img src="img/project1.png" alt="Ouderavond Website" class="project-foto" width="400"
+                            height="250" loading="lazy">
+                        <figcaption class="sr-only">Screenshot van het Ouderavond project</figcaption>
+                    </figure>
+                    <article class="project-inhoud">
                         <h3>Project - Ouderavond Website</h3>
                         <p>Een persoonlijke portfolio website gebouwd voor de ouderavond. Gemaakt met HTML5, CSS en
                             Flexbox.</p>
-                        <div class="tech-tags">
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">Flexbox</span>
-                        </div>
+                        <ul class="tech-tags">
+                            <li class="tech-tag">HTML</li>
+                            <li class="tech-tag">CSS</li>
+                            <li class="tech-tag">Flexbox</li>
+                        </ul>
                         <a href="ouderavond-website/index.html" target="_blank" rel="noopener noreferrer"
                             class="knop-project">
                             Bekijk Ouderavond Project →
                         </a>
-                    </div>
+                    </article>
                 </article>
                 <article class="project-kaart">
-
-                    <img src="img/project2.png" alt="Bank van de Toekomst" class="project-foto" width="400" height="250"
-                        loading="lazy">
-                    <div class="project-inhoud">
+                    <figure>
+                        <img src="img/project2.png" alt="Bank van de Toekomst" class="project-foto" width="400"
+                            height="250" loading="lazy">
+                        <figcaption class="sr-only">Screenshot van het Bank project</figcaption>
+                    </figure>
+                    <article class="project-inhoud">
                         <h3>Project - Bank van de Toekomst</h3>
                         <p>Een moderne bankapplicatie waarbij gebruikers rekeningen kunnen beheren, overschrijvingen
                             kunnen doen en beleggen in aandelen. Gebouwd met JavaScript, HTML en CSS.</p>
-                        <div class="tech-tags">
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">GitHub</span>
-                        </div>
+                        <ul class="tech-tags">
+                            <li class="tech-tag">HTML</li>
+                            <li class="tech-tag">CSS</li>
+                            <li class="tech-tag">JavaScript</li>
+                            <li class="tech-tag">GitHub</li>
+                        </ul>
                         <a href="bank-website/index.html" target="_blank" rel="noopener noreferrer"
                             class="knop-project">
                             Bekijk Bank Project →
                         </a>
-                    </div>
+                    </article>
                 </article>
-            </div>
-        </section>
+            </section>
 
-        <!-- ===== NEEM CONTACT OP ===== -->
-        <section id="contact" class="sectie-rood">
-            <!-- W3C Oplossing: p tag veranderd naar h2 tag -->
-            <h2 class="sectie-ondertitel geel">Laten we praten</h2>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <span class="contact-icoon">&#9993;</span>
-                        <span class="contact-tekst">9030281@student.tcrmbo.nl</span>
-                    </div>
-                    <div class="contact-item">
-                        <span class="contact-icoon">&#128222;</span>
-                        <span class="contact-tekst">+31 123456789</span>
-                    </div>
-                    <div class="contact-item">
-                        <span class="contact-icoon">&#128205;</span>
-                        <span class="contact-tekst">Rotterdam, NL</span>
-                    </div>
-                </div>
-                <form class="contact-formulier">
-                    <div class="formulier-groep">
-                        <label for="naam">Naam:</label>
-                        <input type="text" id="naam" name="naam" placeholder="Jouw naam">
-                    </div>
-                    <div class="formulier-groep">
-                        <label for="email">E-mail:</label>
-                        <input type="email" id="email" name="email" placeholder="jouw@gmail.com">
-                    </div>
-                    <div class="formulier-groep">
-                        <label for="bericht">Bericht:</label>
-                        <textarea id="bericht" name="bericht" placeholder="Schrijf hier je bericht..."></textarea>
-                    </div>
-                    <button type="submit" class="knop-versturen">Versturen</button>
-                    <p class="form-feedback" id="formFeedback" style="display:none; color:green;">
-                        Bericht succesvol verzonden!
-                    </p>
-                </form>
-            </div>
-        </section>
+            <!-- ===== NEEM CONTACT OP ===== -->
+            <section id="contact" class="sectie-rood">
+                <!-- W3C Oplossing: p tag veranderd naar h2 tag -->
+                <h2 class="sectie-ondertitel geel">Laten we praten</h2>
+                <article class="contact-grid">
+                    <address class="contact-info">
+                        <p class="contact-item">
+                            <span class="contact-icoon">&#9993;</span>
+                            <span class="contact-tekst">1234567@student.tcrmbo.nl</span>
+                        </p>
+                        <p class="contact-item">
+                            <span class="contact-icoon">&#128222;</span>
+                            <span class="contact-tekst">+31 123456789</span>
+                        </p>
+                        <p class="contact-item">
+                            <span class="contact-icoon">&#128205;</span>
+                            <span class="contact-tekst">Rotterdam, NL</span>
+                        </p>
+                    </address>
+                    <form class="contact-formulier">
+                        <fieldset class="formulier-groep">
+                            <label for="naam">Naam:</label>
+                            <input type="text" id="naam" name="naam" placeholder="Jouw naam">
+                        </fieldset>
+                        <fieldset class="formulier-groep">
+                            <label for="email">E-mail:</label>
+                            <input type="email" id="email" name="email" placeholder="jouw@gmail.com">
+                        </fieldset>
+                        <fieldset class="formulier-groep">
+                            <label for="bericht">Bericht:</label>
+                            <textarea id="bericht" name="bericht" placeholder="Schrijf hier je bericht..."></textarea>
+                        </fieldset>
+                        <button type="submit" class="knop-versturen">Versturen</button>
+                        <p class="form-feedback" id="formFeedback" style="display:none; color:green;">
+                            Bericht succesvol verzonden!
+                        </p>
+                    </form>
+                </article>
+            </section>
 
     </main>
 
     <!-- ===================== FOOTER ===================== -->
     <footer class="footer">
-        <div class="footer-logo">
+        <figure class="footer-logo">
             <!-- Lighthouse Oplossing: width en height toegevoegd -->
             <img src="img/logo.png" alt="Mijn Logo" width="120" height="40">
-        </div>
+            <figcaption class="sr-only">Logo in footer</figcaption>
+        </figure>
         <nav class="footer-nav" aria-label="Footer navigatie">
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -263,14 +269,14 @@
                 <li><a href="sitemap.html">Sitemap</a></li>
             </ul>
         </nav>
-        <div class="footer-social">
+        <nav class="footer-social" aria-label="Footer social links">
             <a href="https://github.com/Bashar474" aria-label="GitHub">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                     <path
                         d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
                 </svg>
             </a>
-        </div>
+        </nav>
         <p class="footer-tekst">&copy; 2026 Bashar Portfolio. Alle rechten voorbehouden.</p>
     </footer>
 
