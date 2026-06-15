@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO Meta Tags (Opdracht 7) -->
+    <!--SEO Meta Tags-->
     <meta name="description"
         content="Portfolio van Bashar, student Software Development. Bekijk mijn projecten, vaardigheden en opleidingen.">
     <meta name="keywords" content="Bashar, Portfolio, Software Development, Student, Rotterdam, HTML, CSS, Webdesign">
@@ -15,23 +15,21 @@
 
     <title>Bashar — Portfolio</title>
 
-    <!-- SEO Oplossing: Favicon toegevoegd -->
     <link rel="preload" as="image" href="img/Home.jpg">
     <link rel="icon" href="img/logo.png" type="image/png">
 
-    <!-- Link naar CSS -->
+    <!--Link naar CSS-->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <!-- ===================== NAVIGATIE ===================== -->
-    <header class="site-header">
-        <nav class="navbar" id="navbar" aria-label="Hoofd navigatie">
-            <a class="nav-logo" href="#home">
-                <!-- Lighthouse Oplossing: width en height toegevoegd -->
-                <img src="img/logo.png" alt="Logo Bashar portfolio" width="120" height="40">
-            </a>
+    <nav class="navbar" id="navbar">
+        <div class="nav-logo">
+            <!-- Lighthouse Oplossing: width en height toegevoegd -->
+            <img src="img/logo.png" alt="Mijn Logo" width="120" height="40">
+        </div>
 
             <input type="checkbox" id="nav-toggle" class="nav-toggle">
             <label for="nav-toggle" class="nav-hamburger" aria-label="Open navigatiemenu">
@@ -51,7 +49,7 @@
 
     <main>
 
-        <!-- ===== HOME ===== -->
+        <!--HOME-->
         <section id="home" class="sectie-home" style="background-image: url('img/Home.jpg');">
             <section class="home-overlay">
                 <article class="home-inhoud">
@@ -75,9 +73,8 @@
             </section>
         </section>
 
-        <!-- ===== OVER MIJ ===== -->
+        <!--OVER MIJ-->
         <section id="over" class="sectie-grijs">
-            <!-- W3C Oplossing: p tag veranderd naar h2 tag voor correcte structuur -->
             <h2 class="sectie-ondertitel">Wie ben ik?</h2>
             <section class="over-grid">
                 <aside class="over-links">
@@ -99,9 +96,9 @@
             </section>
         </section>
 
-        <!-- ===== KENNIS & VAARDIGHEDEN ===== -->
+        <!--KENNIS & VAARDIGHEDEN-->
         <section id="vaardigheden" class="sectie-donker">
-            <!-- W3C Oplossing: p tag veranderd naar h2 tag -->
+
             <h2 class="sectie-ondertitel geel">Wat kan ik?</h2>
             <section class="vaardigheden-grid">
                 <article class="vaardigheid-kaart">
@@ -130,9 +127,9 @@
             </section>
         </section>
 
-        <!-- ===== OPLEIDINGEN ===== -->
+        <!--OPLEIDINGEN-->
         <section id="opleidingen" class="sectie-wit">
-            <!-- W3C Oplossing: p tag veranderd naar h2 tag -->
+
             <h2 class="sectie-ondertitel">Mijn achtergrond?</h2>
             <section class="opleidingen-lijst">
                 <article class="opleiding-kaart">
@@ -150,26 +147,24 @@
             </section>
         </section>
 
-        <!-- ===== WERKERVARING ===== -->
+        <!--WERKERVARING-->
         <section id="werkervaring" class="sectie-donker">
-            <!-- W3C Oplossing: p tag veranderd naar h2 tag -->
+
             <h2 class="sectie-ondertitel licht">Mijn ervaring</h2>
             <article class="werk-leeg">
                 <p>Geen werkervaring op dit moment. Op zoek naar een stage.</p>
             </article>
         </section>
 
-        <!-- ===== MIJN PROJECTEN ===== -->
+        <!--MIJN PROJECTEN-->
         <section id="projecten" class="sectie-grijs">
             <h2 class="sectie-ondertitel">Wat heb ik gemaakt?</h2>
             <section class="projecten-lijst">
                 <article class="project-kaart">
-                    <figure>
-                        <img src="img/project1.png" alt="Ouderavond Website" class="project-foto" width="400"
-                            height="250" loading="lazy">
-                        <figcaption class="sr-only">Screenshot van het Ouderavond project</figcaption>
-                    </figure>
-                    <article class="project-inhoud">
+
+                    <img src="img/project1.png" alt="Ouderavond Website" class="project-foto" width="400" height="250"
+                        loading="lazy">
+                    <div class="project-inhoud">
                         <h3>Project - Ouderavond Website</h3>
                         <p>Een persoonlijke portfolio website gebouwd voor de ouderavond. Gemaakt met HTML5, CSS en
                             Flexbox.</p>
@@ -185,12 +180,10 @@
                     </article>
                 </article>
                 <article class="project-kaart">
-                    <figure>
-                        <img src="img/project2.png" alt="Bank van de Toekomst" class="project-foto" width="400"
-                            height="250" loading="lazy">
-                        <figcaption class="sr-only">Screenshot van het Bank project</figcaption>
-                    </figure>
-                    <article class="project-inhoud">
+
+                    <img src="img/project2.png" alt="Bank van de Toekomst" class="project-foto" width="400" height="250"
+                        loading="lazy">
+                    <div class="project-inhoud">
                         <h3>Project - Bank van de Toekomst</h3>
                         <p>Een moderne bankapplicatie waarbij gebruikers rekeningen kunnen beheren, overschrijvingen
                             kunnen doen en beleggen in aandelen. Gebouwd met JavaScript, HTML en CSS.</p>
@@ -208,51 +201,51 @@
                 </article>
             </section>
 
-            <!-- ===== NEEM CONTACT OP ===== -->
-            <section id="contact" class="sectie-rood">
-                <!-- W3C Oplossing: p tag veranderd naar h2 tag -->
-                <h2 class="sectie-ondertitel geel">Laten we praten</h2>
-                <article class="contact-grid">
-                    <address class="contact-info">
-                        <p class="contact-item">
-                            <span class="contact-icoon">&#9993;</span>
-                            <span class="contact-tekst">1234567@student.tcrmbo.nl</span>
-                        </p>
-                        <p class="contact-item">
-                            <span class="contact-icoon">&#128222;</span>
-                            <span class="contact-tekst">+31 123456789</span>
-                        </p>
-                        <p class="contact-item">
-                            <span class="contact-icoon">&#128205;</span>
-                            <span class="contact-tekst">Rotterdam, NL</span>
-                        </p>
-                    </address>
-                    <form class="contact-formulier">
-                        <fieldset class="formulier-groep">
-                            <label for="naam">Naam:</label>
-                            <input type="text" id="naam" name="naam" placeholder="Jouw naam">
-                        </fieldset>
-                        <fieldset class="formulier-groep">
-                            <label for="email">E-mail:</label>
-                            <input type="email" id="email" name="email" placeholder="jouw@gmail.com">
-                        </fieldset>
-                        <fieldset class="formulier-groep">
-                            <label for="bericht">Bericht:</label>
-                            <textarea id="bericht" name="bericht" placeholder="Schrijf hier je bericht..."></textarea>
-                        </fieldset>
-                        <button type="submit" class="knop-versturen">Versturen</button>
-                        <p class="form-feedback" id="formFeedback" style="display:none; color:green;">
-                            Bericht succesvol verzonden!
-                        </p>
-                    </form>
-                </article>
-            </section>
+        <!-- ===== NEEM CONTACT OP ===== -->
+        <section id="contact" class="sectie-rood">
+            <!-- W3C Oplossing: p tag veranderd naar h2 tag -->
+            <h2 class="sectie-ondertitel geel">Laten we praten</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icoon">&#9993;</span>
+                        <span class="contact-tekst">9030281@student.tcrmbo.nl</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icoon">&#128222;</span>
+                        <span class="contact-tekst">+31 123456789</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icoon">&#128205;</span>
+                        <span class="contact-tekst">Rotterdam, NL</span>
+                    </div>
+                </div>
+                <form class="contact-formulier">
+                    <div class="formulier-groep">
+                        <label for="naam">Naam:</label>
+                        <input type="text" id="naam" name="naam" placeholder="Jouw naam">
+                    </div>
+                    <div class="formulier-groep">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" placeholder="jouw@gmail.com">
+                    </div>
+                    <div class="formulier-groep">
+                        <label for="bericht">Bericht:</label>
+                        <textarea id="bericht" name="bericht" placeholder="Schrijf hier je bericht..."></textarea>
+                    </div>
+                    <button type="submit" class="knop-versturen">Versturen</button>
+                    <p class="form-feedback" id="formFeedback" style="display:none; color:green;">
+                        Bericht succesvol verzonden!
+                    </p>
+                </form>
+            </div>
+        </section>
 
     </main>
 
-    <!-- ===================== FOOTER ===================== -->
+    <!--FOOTER-->
     <footer class="footer">
-        <figure class="footer-logo">
+        <div class="footer-logo">
             <!-- Lighthouse Oplossing: width en height toegevoegd -->
             <img src="img/logo.png" alt="Mijn Logo" width="120" height="40">
             <figcaption class="sr-only">Logo in footer</figcaption>
@@ -280,7 +273,7 @@
         <p class="footer-tekst">&copy; 2026 Bashar Portfolio. Alle rechten voorbehouden.</p>
     </footer>
 
-    <!-- JavaScript: actieve navlink bij scrollen -->
+    <!-- JavaScript-->
     <script>
         const secties = document.querySelectorAll('section[id]');
         const navLinks = document.querySelectorAll('.nav-links a');
@@ -300,7 +293,7 @@
             });
         });
 
-        // Simpel formulier feedback
+        // formulier feedback
         const form = document.querySelector('.contact-formulier');
         const feedback = document.getElementById('formFeedback');
 
