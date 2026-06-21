@@ -1,6 +1,4 @@
 // ===== Variabelen =====
-
-// Kleuren
 $kleur-achtergrond: #ffffff;
 $kleur-tekst: #1a2942;
 $kleur-blauw-donker: #44628b;
@@ -12,12 +10,10 @@ $kleur-groen-knop-hover: #2d5a4d;
 $kleur-blauw-knop: #1a6bbf;
 $kleur-blauw-knop-hover: #145299;
 
-// Afstand
 $padding-sectie: 60px;
 $padding-zijkant: 5%;
 $padding-klein: $padding-sectie / 2;
 
-// Lettertype
 $font-hoofd: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 
 // ===== Reset =====
@@ -28,33 +24,27 @@ $font-hoofd: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
 }
-
 html {
   scroll-behavior: smooth;
 }
-
 body {
   font-family: $font-hoofd;
   color: $kleur-tekst;
   line-height: 1.7;
   background: $kleur-achtergrond;
 }
-
 img {
   max-width: 100%;
   display: block;
 }
-
 a {
   text-decoration: none;
   color: inherit;
 }
-
 ul {
   list-style: none;
 }
 
-// Verborgen tekst voor schermlezers
 .sr-only {
   position: absolute;
   width: 1px;
@@ -67,7 +57,6 @@ ul {
   border: 0;
 }
 
-// ===== Gedeelde sectie stijlen =====
 %sectie-base {
   padding: $padding-sectie $padding-zijkant;
 }
@@ -85,19 +74,16 @@ ul {
   height: 64px;
   box-shadow: 0 2px 10px rgba(255, 255, 255, 0.3);
 
-  // Logo afbeelding
   .nav-logo {
     height: 40px;
     width: auto;
     object-fit: contain;
   }
 
-  // Navigatie links
   .nav-links {
     display: flex;
     justify-content: center;
     gap: 2rem;
-
     a {
       color: rgba(0, 0, 0, 0.75);
       font-size: 0.9rem;
@@ -107,11 +93,9 @@ ul {
       transition:
         color 0.2s,
         border-color 0.2s;
-
       &:hover {
         color: $kleur-oranje;
       }
-
       &.actief {
         color: $kleur-oranje;
         border-bottom: 2px solid $kleur-oranje;
@@ -120,19 +104,14 @@ ul {
     }
   }
 }
-
-// Verberg checkbox
 .nav-toggle {
   display: none;
 }
-
-// Hamburger icoon
 .nav-hamburger {
   display: none;
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
-
   span {
     width: 24px;
     height: 2px;
@@ -151,11 +130,9 @@ ul {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: 32px;
-
   &.geel {
     color: #ffffff;
   }
-
   &.licht {
     color: #ffffff;
   }
@@ -169,20 +146,23 @@ ul {
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
-}
-
-.home-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(10, 20, 40, 0.6);
   display: flex;
   align-items: center;
   padding: 0 5%;
+
+  // Donkere laag over de afbeelding
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 20, 40, 0.6);
+    z-index: 0;
+  }
 }
-
 .home-inhoud {
+  position: relative;
+  z-index: 1;
   max-width: 600px;
-
   h1 {
     font-size: 2.4rem;
     font-weight: 800;
@@ -190,7 +170,6 @@ ul {
     margin-bottom: 14px;
     line-height: 1.2;
   }
-
   p {
     font-size: 1rem;
     color: rgba(255, 255, 255, 0.82);
@@ -198,15 +177,12 @@ ul {
     margin-bottom: 28px;
   }
 }
-
-// Knoppen op home pagina
 .home-knoppen {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
   margin-bottom: 20px;
 }
-
 .knop-groen {
   background: $kleur-groen-knop;
   color: #ffffff;
@@ -217,13 +193,11 @@ ul {
   transition:
     background 0.2s,
     transform 0.2s;
-
   &:hover {
     background: $kleur-groen-knop-hover;
     transform: translateY(-2px);
   }
 }
-
 .knop-blauw {
   background: $kleur-blauw-knop;
   color: #ffffff;
@@ -234,19 +208,15 @@ ul {
   transition:
     background 0.2s,
     transform 0.2s;
-
   &:hover {
     background: $kleur-blauw-knop-hover;
     transform: translateY(-2px);
   }
 }
-
-// Social media icoon
 .home-social {
   display: flex;
   gap: 10px;
 }
-
 .social-knop {
   width: 38px;
   height: 38px;
@@ -257,7 +227,6 @@ ul {
   justify-content: center;
   color: #ffffff;
   transition: background 0.2s;
-
   &:hover {
     background: $kleur-groen;
   }
@@ -268,7 +237,6 @@ ul {
   @extend %sectie-base;
   background: $kleur-grijs;
 }
-
 .over-grid {
   display: grid;
   grid-template-columns: 220px 1fr;
@@ -276,36 +244,28 @@ ul {
   align-items: start;
   max-width: 1000px;
   margin: 0 auto;
-
-  // Titel over de hele breedte
   .sectie-ondertitel {
     grid-column: 1 / -1;
   }
 }
-
 .over-links {
   text-align: center;
 }
-
 .over-foto-placeholder {
   font-size: 4rem;
   margin-bottom: 14px;
 }
-
 .over-naam {
   font-weight: 800;
   font-size: 1rem;
   color: $kleur-tekst;
   margin-bottom: 4px;
 }
-
 .over-rol {
   font-size: 0.99rem;
   color: $kleur-oranje;
   font-weight: 600;
 }
-
-// Tekstvak met informatie
 .over-tekstvak {
   background: rgba(182, 240, 247, 0.48);
   border: 1px solid #e0e4ec;
@@ -315,7 +275,6 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 12px;
-
   p {
     color: #000000;
     font-size: 0.92rem;
@@ -328,27 +287,21 @@ ul {
   @extend %sectie-base;
   background: $kleur-blauw-donker;
 }
-
 .vaardigheden-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   max-width: 900px;
   margin: 0 auto;
-
-  // Titel over de hele breedte
   .sectie-ondertitel {
     grid-column: 1 / -1;
   }
 }
-
-// Eén vaardigheidskaart
 .vaardigheid-kaart {
   background: rgba(255, 255, 255, 0.19);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 10px;
   padding: 1.5rem;
-
   h3 {
     color: rgba(255, 255, 255, 0.9);
     font-size: 0.85rem;
@@ -358,12 +311,10 @@ ul {
     padding-bottom: 8px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   }
-
   ul {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-
     li {
       background: rgba(255, 255, 255, 0.12);
       color: rgba(255, 255, 255, 0.88);
@@ -379,7 +330,6 @@ ul {
   @extend %sectie-base;
   background: $kleur-grijs;
 }
-
 .opleidingen-lijst {
   display: flex;
   flex-direction: column;
@@ -387,8 +337,6 @@ ul {
   max-width: 800px;
   margin: 0 auto;
 }
-
-// Eén opleiding kaart
 .opleiding-kaart {
   background: rgba(182, 240, 247, 0.48);
   border-radius: 10px;
@@ -396,27 +344,23 @@ ul {
   border-left: 4px solid $kleur-groen;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
-
 .opleiding-periode {
   font-size: 0.78rem;
   color: $kleur-groen;
   font-weight: 700;
   margin-bottom: 6px;
 }
-
 .opleiding-kaart h3 {
   font-size: 1rem;
   font-weight: 700;
   color: $kleur-tekst;
   margin-bottom: 4px;
 }
-
 .opleiding-school {
   font-size: 0.85rem;
   color: #000000;
   margin-bottom: 10px;
 }
-
 .diploma-rij {
   font-size: 0.8rem;
   color: #000000;
@@ -424,7 +368,6 @@ ul {
   align-items: center;
   gap: 8px;
 }
-
 .badge-bezig {
   background: #fef3c7;
   color: #92400e;
@@ -433,7 +376,6 @@ ul {
   font-size: 0.75rem;
   font-weight: 700;
 }
-
 .badge-ja {
   background: #d1fae5;
   color: #065f46;
@@ -463,14 +405,10 @@ ul {
   gap: 1.5rem;
   max-width: 900px;
   margin: 0 auto;
-
-  // Titel over de hele breedte
   .sectie-ondertitel {
     grid-column: 1 / -1;
   }
 }
-
-// Eén project kaart
 .project-kaart {
   display: flex;
   flex-direction: column;
@@ -478,26 +416,13 @@ ul {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-
-  // Titel van het project
-  > h3 {
+  padding: 0 1.2rem 1.2rem;
+  h3 {
     font-size: 1rem;
     font-weight: 700;
     color: $kleur-tekst;
-    margin: 1.2rem 1.2rem 8px;
+    margin: 1.2rem 0 8px;
   }
-}
-
-.project-foto {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-// Project tekst
-.project-inhoud {
-  padding: 0 1.2rem 1.2rem;
-
   p {
     font-size: 0.85rem;
     color: #555;
@@ -505,14 +430,19 @@ ul {
     line-height: 1.6;
   }
 }
-
+.project-foto {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin: 0 -1.2rem 0;
+  border-radius: 10px 10px 0 0;
+}
 .tech-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
   margin-bottom: 14px;
 }
-
 .tech-tag {
   background: #e8f0fe;
   color: $kleur-blauw-donker;
@@ -521,14 +451,12 @@ ul {
   font-size: 0.75rem;
   font-weight: 600;
 }
-
 .knop-project {
   display: inline-block;
   color: $kleur-blauw-knop;
   font-weight: 600;
   font-size: 0.88rem;
   transition: color 0.2s;
-
   &:hover {
     color: $kleur-blauw-knop-hover;
   }
@@ -539,28 +467,22 @@ ul {
   @extend %sectie-base;
   background: $kleur-blauw-donker;
 }
-
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   max-width: 900px;
   margin: 0 auto;
-
-  // Titel over de hele breedte
   .sectie-ondertitel {
     grid-column: 1 / -1;
   }
 }
-
-// Contactgegevens
 .contact-info {
   font-style: normal;
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
-
 .contact-item {
   display: flex;
   align-items: center;
@@ -569,30 +491,24 @@ ul {
   color: rgba(255, 255, 255, 0.88);
   font-size: 0.92rem;
 }
-
 .contact-icoon {
   font-size: 1.3rem;
 }
-
-// Contactformulier
 .contact-formulier {
   display: flex;
   flex-direction: column;
   gap: 14px;
 }
-
 .formulier-groep {
   display: flex;
   flex-direction: column;
   gap: 4px;
   margin: 0;
-
   label {
     font-size: 0.85rem;
     color: rgba(255, 255, 255, 0.85);
     font-weight: 600;
   }
-
   input,
   textarea {
     padding: 10px 12px;
@@ -602,23 +518,19 @@ ul {
     color: #ffffff;
     font-family: $font-hoofd;
     font-size: 0.9rem;
-
     &::placeholder {
       color: rgba(255, 255, 255, 0.5);
     }
-
     &:focus {
       outline: none;
       border-color: $kleur-oranje;
     }
   }
-
   textarea {
     min-height: 100px;
     resize: vertical;
   }
 }
-
 .knop-versturen {
   background: $kleur-groen-knop;
   color: #ffffff;
@@ -631,14 +543,11 @@ ul {
   transition:
     background 0.2s,
     transform 0.2s;
-
   &:hover {
     background: $kleur-groen-knop-hover;
     transform: translateY(-2px);
   }
 }
-
-// Feedback na verzenden
 .form-feedback {
   display: none;
   color: #4ade80;
@@ -656,46 +565,36 @@ ul {
   align-items: center;
   gap: 16px;
 }
-
 .footer-logo {
   height: 40px;
   width: auto;
   object-fit: contain;
 }
-
-// Footer navigatie links
 .footer-nav ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
-
   a {
     color: rgba(255, 255, 255, 0.7);
     font-size: 0.85rem;
     transition: color 0.2s;
-
     &:hover {
       color: #ffffff;
     }
   }
 }
-
-// Social media in footer
 .footer-social {
   display: flex;
   gap: 10px;
-
   a {
     color: rgba(255, 255, 255, 0.7);
     transition: color 0.2s;
-
     &:hover {
       color: #ffffff;
     }
   }
 }
-
 .footer-tekst {
   color: rgba(255, 255, 255, 0.5);
   font-size: 0.8rem;
@@ -703,10 +602,8 @@ ul {
 
 // ===== Mobiele weergave =====
 @media (max-width: 767px) {
-  // Navigatie wordt hamburger menu
   .navbar {
     flex-wrap: wrap;
-
     .nav-links {
       display: none;
       flex-basis: 100%;
@@ -714,35 +611,26 @@ ul {
       gap: 0;
       padding-bottom: 10px;
     }
-
-    // Toon menu als aangevinkt
     .nav-toggle:checked ~ .nav-links {
       display: flex;
     }
-
     .nav-hamburger {
       display: flex;
     }
   }
-
   .home-inhoud h1 {
     font-size: 1.8rem;
   }
-
-  // Grid wordt één kolom
   .over-grid {
     grid-template-columns: 1fr;
     text-align: center;
   }
-
   .vaardigheden-grid {
     grid-template-columns: 1fr;
   }
-
   .projecten-lijst {
     grid-template-columns: 1fr;
   }
-
   .contact-grid {
     grid-template-columns: 1fr;
   }
