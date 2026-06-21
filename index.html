@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--SEO Meta Tags-->
+    <!-- SEO informatie voor zoekmachines -->
+    <meta name="language" content="nl">
     <meta name="description"
         content="Portfolio van Bashar, student Software Development. Bekijk mijn projecten, vaardigheden en opleidingen.">
     <meta name="keywords" content="Bashar, Portfolio, Software Development, Student, Rotterdam, HTML, CSS, Webdesign">
@@ -13,29 +14,35 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.jouwwebsite.nl/index.html">
 
+    <!-- Titel van de pagina -->
     <title>Bashar — Portfolio</title>
 
+    <!-- Afbeelding vooraf laden voor snellere weergave -->
     <link rel="preload" as="image" href="img/Home.jpg">
+    <!-- Icoon voor in het tabblad van de browser -->
     <link rel="icon" href="img/logo.png" type="image/png">
 
-    <!--Link naar CSS-->
+    <!-- Link naar het CSS bestand -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!--NAVIGATIE-->
-    <nav class="navbar" id="navbar">
-        <div class="nav-logo">
+    <!-- Header met de navigatiebalk -->
+    <header>
+        <nav class="navbar" id="navbar">
 
-            <img src="img/logo.png" alt="Mijn Logo" width="120" height="40">
-        </div>
+            <!-- Logo afbeelding linksboven -->
+            <img src="img/logo.png" alt="Mijn Logo" class="nav-logo" width="120" height="40">
 
+            <!-- Verborgen checkbox voor het hamburger menu -->
             <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <!-- Hamburger icoon voor op mobiel -->
             <label for="nav-toggle" class="nav-hamburger" aria-label="Open navigatiemenu">
                 <span></span><span></span><span></span>
             </label>
 
+            <!-- De navigatie links -->
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#over">Over</a></li>
@@ -47,22 +54,29 @@
         </nav>
     </header>
 
+    <!-- Hier begint de hoofdinhoud -->
     <main>
 
-        <!--HOME-->
-        <section id="home" class="sectie-home" style="background-image: url('img/Home.jpg');">
+        <!-- Home sectie met achtergrondafbeelding -->
+        <section id="home" class="sectie-home">
+            <!-- Donkere laag over de afbeelding -->
             <section class="home-overlay">
+                <!-- Tekst en knoppen op de home pagina -->
                 <article class="home-inhoud">
+                    <!-- Grote titel -->
                     <h1>Hi, ik ben Bashar</h1>
-                    <p>Eerstejaars student Software Development aan het <br> Techniek College Rotterdam, bezig met het
-                        leren <br>
+                    <!-- Korte introductie tekst -->
+                    <p>Eerstejaars student Software Development aan het Techniek College Rotterdam, bezig met het leren
                         bouwen van moderne websites en applicaties.</p>
+                    <!-- Twee knoppen om te klikken -->
                     <nav class="home-knoppen" aria-label="Startpagina acties">
                         <a href="#contact" class="knop-groen">Neem Contact Op</a>
                         <a href="#projecten" class="knop-blauw">Bekijk Projecten</a>
                     </nav>
+                    <!-- Link naar mijn GitHub -->
                     <aside class="home-social" aria-label="Social media links">
                         <a href="https://github.com/Bashar474" class="social-knop" aria-label="GitHub">
+                            <!-- GitHub icoon als SVG -->
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                                 <path
                                     d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
@@ -73,18 +87,26 @@
             </section>
         </section>
 
-        <!--OVER MIJ-->
+        <!-- Over mij sectie -->
         <section id="over" class="sectie-grijs">
+            <!-- Titel van deze sectie -->
             <h2 class="sectie-ondertitel">Wie ben ik?</h2>
+            <!-- Twee kolommen: foto links, tekst rechts -->
             <section class="over-grid">
+                <!-- Linker kolom met foto en naam -->
                 <aside class="over-links">
-
+                    <!-- Placeholder voor een profielfoto -->
+                    <figure>
                         <span class="over-foto-placeholder" aria-hidden="true">🖼️</span>
+                        <!-- Deze tekst is alleen voor schermlezers -->
                         <figcaption class="sr-only">Profiel foto placeholder</figcaption>
-
+                    </figure>
+                    <!-- Mijn naam -->
                     <p class="over-naam">Hallo! Ik ben Bashar</p>
+                    <!-- Wat ik doe -->
                     <p class="over-rol">Software Developer Student</p>
                 </aside>
+                <!-- Rechter kolom met informatie over mij -->
                 <article class="over-tekstvak">
                     <p>Ik ben momenteel eerstejaars student Software Development MBO 4 BOL aan het Techniek College
                         Rotterdam. Ik ben net begonnen met mijn opleiding en leer elke dag nieuwe dingen, zoals HTML,
@@ -96,11 +118,13 @@
             </section>
         </section>
 
-        <!--KENNIS & VAARDIGHEDEN-->
+        <!-- Vaardigheden sectie -->
         <section id="vaardigheden" class="sectie-donker">
-
+            <!-- Titel van deze sectie -->
             <h2 class="sectie-ondertitel geel">Wat kan ik?</h2>
+            <!-- Drie kaarten naast elkaar voor vaardigheden -->
             <section class="vaardigheden-grid">
+                <!-- Kaart 1: Frontend vaardigheden -->
                 <article class="vaardigheid-kaart">
                     <h3>Frontend</h3>
                     <ul>
@@ -108,6 +132,7 @@
                         <li>HTML/CSS</li>
                     </ul>
                 </article>
+                <!-- Kaart 2: Backend vaardigheden -->
                 <article class="vaardigheid-kaart">
                     <h3>Backend</h3>
                     <ul>
@@ -115,6 +140,7 @@
                         <li>PHP</li>
                     </ul>
                 </article>
+                <!-- Kaart 3: Tools die ik gebruik -->
                 <article class="vaardigheid-kaart">
                     <h3>Tools &amp; Other</h3>
                     <ul>
@@ -127,17 +153,24 @@
             </section>
         </section>
 
-        <!--OPLEIDINGEN-->
+        <!-- Opleidingen sectie -->
         <section id="opleidingen" class="sectie-wit">
-
+            <!-- Titel van deze sectie -->
             <h2 class="sectie-ondertitel">Mijn achtergrond?</h2>
+            <!-- Lijst met mijn opleidingen -->
             <section class="opleidingen-lijst">
+                <!-- Opleiding 1: huidige opleiding -->
                 <article class="opleiding-kaart">
+                    <!-- Periode van de opleiding -->
                     <p class="opleiding-periode">2025 &ndash; Heden</p>
+                    <!-- Naam van de opleiding -->
                     <h3>Software Developer Niveau 4</h3>
+                    <!-- Naam van de school -->
                     <p class="opleiding-school">Techniek College Rotterdam</p>
+                    <!-- Of ik een diploma heb -->
                     <p class="diploma-rij">Diploma: <span class="badge-bezig">Nog bezig</span></p>
                 </article>
+                <!-- Opleiding 2: eerdere opleiding -->
                 <article class="opleiding-kaart">
                     <p class="opleiding-periode">2012 &ndash; 2015</p>
                     <h3>HAVO</h3>
@@ -147,109 +180,124 @@
             </section>
         </section>
 
-        <!--WERKERVARING-->
+        <!-- Werkervaring sectie -->
         <section id="werkervaring" class="sectie-donker">
-
+            <!-- Titel van deze sectie -->
             <h2 class="sectie-ondertitel licht">Mijn ervaring</h2>
+            <!-- Bericht omdat ik nog geen werkervaring heb -->
             <article class="werk-leeg">
                 <p>Geen werkervaring op dit moment. Op zoek naar een stage.</p>
             </article>
         </section>
 
-        <!--MIJN PROJECTEN-->
+        <!-- Projecten sectie -->
         <section id="projecten" class="sectie-grijs">
+            <!-- Titel van deze sectie -->
             <h2 class="sectie-ondertitel">Wat heb ik gemaakt?</h2>
+            <!-- Twee project kaarten naast elkaar -->
             <section class="projecten-lijst">
+                <!-- Project 1: Ouderavond website -->
                 <article class="project-kaart">
-
+                    <!-- Afbeelding van het project -->
                     <img src="img/project1.png" alt="Ouderavond Website" class="project-foto" width="400" height="250"
                         loading="lazy">
-                    <div class="project-inhoud">
+                    <!-- Informatie over dit project -->
+                    <section class="project-inhoud">
                         <h3>Project - Ouderavond Website</h3>
                         <p>Een persoonlijke portfolio website gebouwd voor de ouderavond. Gemaakt met HTML5, CSS en
                             Flexbox.</p>
+                        <!-- Technieken die ik heb gebruikt -->
                         <ul class="tech-tags">
                             <li class="tech-tag">HTML</li>
                             <li class="tech-tag">CSS</li>
                             <li class="tech-tag">Flexbox</li>
                         </ul>
+                        <!-- Link om het project te bekijken -->
                         <a href="ouderavond-website/index.html" target="_blank" rel="noopener noreferrer"
-                            class="knop-project">
-                            Bekijk Ouderavond Project →
-                        </a>
-                    </article>
+                            class="knop-project">Bekijk Ouderavond Project →</a>
+                    </section>
                 </article>
+                <!-- Project 2: Bank website -->
                 <article class="project-kaart">
-
+                    <!-- Afbeelding van het project -->
                     <img src="img/project2.png" alt="Bank van de Toekomst" class="project-foto" width="400" height="250"
                         loading="lazy">
-                    <div class="project-inhoud">
+                    <!-- Informatie over dit project -->
+                    <section class="project-inhoud">
                         <h3>Project - Bank van de Toekomst</h3>
                         <p>Een moderne bankapplicatie waarbij gebruikers rekeningen kunnen beheren, overschrijvingen
                             kunnen doen en beleggen in aandelen. Gebouwd met JavaScript, HTML en CSS.</p>
+                        <!-- Technieken die ik heb gebruikt -->
                         <ul class="tech-tags">
                             <li class="tech-tag">HTML</li>
                             <li class="tech-tag">CSS</li>
                             <li class="tech-tag">JavaScript</li>
                             <li class="tech-tag">GitHub</li>
                         </ul>
+                        <!-- Link om het project te bekijken -->
                         <a href="bank-website/index.html" target="_blank" rel="noopener noreferrer"
-                            class="knop-project">
-                            Bekijk Bank Project →
-                        </a>
-                    </article>
+                            class="knop-project">Bekijk Bank Project →</a>
+                    </section>
                 </article>
             </section>
+        </section>
 
-        <!--NEEM CONTACT OP-->
+        <!-- Contact sectie -->
         <section id="contact" class="sectie-rood">
-
+            <!-- Titel van deze sectie -->
             <h2 class="sectie-ondertitel geel">Laten we praten</h2>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <div class="contact-item">
+            <!-- Twee kolommen: contactgegevens en formulier -->
+            <section class="contact-grid">
+                <!-- Linker kolom: mijn contactgegevens -->
+                <address class="contact-info">
+                    <!-- E-mail adres -->
+                    <p class="contact-item">
                         <span class="contact-icoon">&#9993;</span>
-                        <span class="contact-tekst">9030281@student.tcrmbo.nl</span>
-                    </div>
-                    <div class="contact-item">
+                        <span class="contact-tekst">test@student.tcrmbo.nl</span>
+                    </p>
+                    <!-- Telefoonnummer -->
+                    <p class="contact-item">
                         <span class="contact-icoon">&#128222;</span>
                         <span class="contact-tekst">+31 123456789</span>
-                    </div>
-                    <div class="contact-item">
+                    </p>
+                    <!-- Woonplaats -->
+                    <p class="contact-item">
                         <span class="contact-icoon">&#128205;</span>
                         <span class="contact-tekst">Rotterdam, NL</span>
-                    </div>
-                </div>
+                    </p>
+                </address>
+                <!-- Rechter kolom: het contactformulier -->
                 <form class="contact-formulier">
-                    <div class="formulier-groep">
+                    <!-- Invoerveld voor naam -->
+                    <p class="formulier-groep">
                         <label for="naam">Naam:</label>
                         <input type="text" id="naam" name="naam" placeholder="Jouw naam">
-                    </div>
-                    <div class="formulier-groep">
+                    </p>
+                    <!-- Invoerveld voor e-mail -->
+                    <p class="formulier-groep">
                         <label for="email">E-mail:</label>
                         <input type="email" id="email" name="email" placeholder="jouw@gmail.com">
-                    </div>
-                    <div class="formulier-groep">
+                    </p>
+                    <!-- Invoerveld voor bericht -->
+                    <p class="formulier-groep">
                         <label for="bericht">Bericht:</label>
                         <textarea id="bericht" name="bericht" placeholder="Schrijf hier je bericht..."></textarea>
-                    </div>
-                    <button type="submit" class="knop-versturen">Versturen</button>
-                    <p class="form-feedback" id="formFeedback" style="display:none; color:green;">
-                        Bericht succesvol verzonden!
                     </p>
+                    <!-- Knop om te versturen -->
+                    <button type="submit" class="knop-versturen">Versturen</button>
+                    <!-- Bericht dat verschijnt na verzenden -->
+                    <p class="form-feedback" id="formFeedback">Bericht succesvol verzonden!</p>
                 </form>
-            </div>
+            </section>
         </section>
 
     </main>
 
-    <!--FOOTER-->
+    <!-- Footer onderaan de pagina -->
     <footer class="footer">
-        <div class="footer-logo">
-
-            <img src="img/logo.png" alt="Mijn Logo" width="120" height="40">
-
-        </div>
+        <!-- Logo in de footer -->
+        <img src="img/logo.png" alt="Mijn Logo" class="footer-logo" width="120" height="40">
+        <!-- Navigatie links in de footer -->
         <nav class="footer-nav" aria-label="Footer navigatie">
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -258,33 +306,39 @@
                 <li><a href="#opleidingen">Opleidingen</a></li>
                 <li><a href="#projecten">Projecten</a></li>
                 <li><a href="#contact">Contact</a></li>
-
+                <!-- Link naar de sitemap -->
                 <li><a href="sitemap.html">Sitemap</a></li>
             </ul>
         </nav>
+        <!-- Social media link in de footer -->
         <nav class="footer-social" aria-label="Footer social links">
             <a href="https://github.com/Bashar474" aria-label="GitHub">
+                <!-- GitHub icoon als SVG -->
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                     <path
                         d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
                 </svg>
             </a>
         </nav>
+        <!-- Copyright tekst -->
         <p class="footer-tekst">&copy; 2026 Bashar Portfolio. Alle rechten voorbehouden.</p>
     </footer>
 
-    <!-- JavaScript-->
+    <!-- JavaScript voor twee dingen -->
     <script>
-        const secties = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('.nav-links a');
+        // 1. Actieve link in de navigatie markeren bij scrollen
+        var secties = document.querySelectorAll('section[id]');
+        var navLinks = document.querySelectorAll('.nav-links a');
 
         window.addEventListener('scroll', function () {
-            let huidigeId = '';
+            var huidigeId = '';
+            // Kijk welke sectie zichtbaar is
             secties.forEach(function (sectie) {
                 if (window.scrollY >= sectie.offsetTop - 80) {
                     huidigeId = sectie.getAttribute('id');
                 }
             });
+            // Geef de juiste link een actieve stijl
             navLinks.forEach(function (link) {
                 link.classList.remove('actief');
                 if (link.getAttribute('href') === '#' + huidigeId) {
@@ -293,19 +347,22 @@
             });
         });
 
-        // formulier feedback
-        const form = document.querySelector('.contact-formulier');
-        const feedback = document.getElementById('formFeedback');
+        // 2. Feedback tonen na het verzenden van het formulier
+        var form = document.querySelector('.contact-formulier');
+        var feedback = document.getElementById('formFeedback');
 
         form.addEventListener('submit', function (e) {
+            // Stop het standaard gedrag van het formulier
             e.preventDefault();
+            // Toon het feedback bericht
             feedback.style.display = 'block';
+            // Maak het formulier leeg
             form.reset();
-            setTimeout(() => {
+            // Verberg het bericht na 3 seconden
+            setTimeout(function () {
                 feedback.style.display = 'none';
             }, 3000);
         });
-    
     </script>
 
 </body>
