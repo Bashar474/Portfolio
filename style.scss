@@ -276,6 +276,11 @@ ul {
   align-items: start;
   max-width: 1000px;
   margin: 0 auto;
+
+  // Titel over de hele breedte
+  .sectie-ondertitel {
+    grid-column: 1 / -1;
+  }
 }
 
 .over-links {
@@ -330,6 +335,11 @@ ul {
   gap: 1.5rem;
   max-width: 900px;
   margin: 0 auto;
+
+  // Titel over de hele breedte
+  .sectie-ondertitel {
+    grid-column: 1 / -1;
+  }
 }
 
 // Eén vaardigheidskaart
@@ -442,11 +452,8 @@ ul {
   border: 2px dashed rgba(255, 255, 255, 0.3);
   max-width: 800px;
   margin: 0 auto;
-
-  p {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 0.92rem;
-  }
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.92rem;
 }
 
 // ===== Projecten sectie =====
@@ -456,6 +463,11 @@ ul {
   gap: 1.5rem;
   max-width: 900px;
   margin: 0 auto;
+
+  // Titel over de hele breedte
+  .sectie-ondertitel {
+    grid-column: 1 / -1;
+  }
 }
 
 // Eén project kaart
@@ -466,6 +478,14 @@ ul {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+
+  // Titel van het project
+  > h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: $kleur-tekst;
+    margin: 1.2rem 1.2rem 8px;
+  }
 }
 
 .project-foto {
@@ -476,14 +496,7 @@ ul {
 
 // Project tekst
 .project-inhoud {
-  padding: 1.2rem;
-
-  h3 {
-    font-size: 1rem;
-    font-weight: 700;
-    color: $kleur-tekst;
-    margin-bottom: 8px;
-  }
+  padding: 0 1.2rem 1.2rem;
 
   p {
     font-size: 0.85rem;
@@ -533,6 +546,11 @@ ul {
   gap: 2rem;
   max-width: 900px;
   margin: 0 auto;
+
+  // Titel over de hele breedte
+  .sectie-ondertitel {
+    grid-column: 1 / -1;
+  }
 }
 
 // Contactgegevens
@@ -630,7 +648,7 @@ ul {
 
 // ===== Footer =====
 .footer {
-  background: #757474;
+  background: #1a2942;
   padding: $padding-klein $padding-zijkant;
   text-align: center;
   display: flex;

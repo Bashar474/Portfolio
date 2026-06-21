@@ -43,10 +43,10 @@ ul {
   border: 0;
 }
 
-.sectie-rood,
-.sectie-wit,
+.sectie-grijs,
 .sectie-donker,
-.sectie-grijs {
+.sectie-wit,
+.sectie-rood {
   padding: 60px 5%;
 }
 
@@ -66,7 +66,6 @@ ul {
 .navbar .nav-logo {
   height: 40px;
   width: auto;
-  -o-object-fit: contain;
   object-fit: contain;
 }
 
@@ -240,6 +239,10 @@ ul {
   margin: 0 auto;
 }
 
+.over-grid .sectie-ondertitel {
+  grid-column: 1 / -1;
+}
+
 .over-links {
   text-align: center;
 }
@@ -289,6 +292,10 @@ ul {
   gap: 1.5rem;
   max-width: 900px;
   margin: 0 auto;
+}
+
+.vaardigheden-grid .sectie-ondertitel {
+  grid-column: 1 / -1;
 }
 
 .vaardigheid-kaart {
@@ -396,9 +403,6 @@ ul {
   border: 2px dashed rgba(255, 255, 255, 0.3);
   max-width: 800px;
   margin: 0 auto;
-}
-
-.werk-leeg p {
   color: rgba(255, 255, 255, 0.8);
   font-size: 0.92rem;
 }
@@ -411,6 +415,10 @@ ul {
   margin: 0 auto;
 }
 
+.projecten-lijst .sectie-ondertitel {
+  grid-column: 1 / -1;
+}
+
 .project-kaart {
   display: flex;
   flex-direction: column;
@@ -420,22 +428,21 @@ ul {
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 
+.project-kaart>h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a2942;
+  margin: 1.2rem 1.2rem 8px;
+}
+
 .project-foto {
   width: 100%;
   height: auto;
-  -o-object-fit: cover;
   object-fit: cover;
 }
 
 .project-inhoud {
-  padding: 1.2rem;
-}
-
-.project-inhoud h3 {
-  font-size: 1rem;
-  font-weight: 700;
-  color: #1a2942;
-  margin-bottom: 8px;
+  padding: 0 1.2rem 1.2rem;
 }
 
 .project-inhoud p {
@@ -483,6 +490,10 @@ ul {
   gap: 2rem;
   max-width: 900px;
   margin: 0 auto;
+}
+
+.contact-grid .sectie-ondertitel {
+  grid-column: 1 / -1;
 }
 
 .contact-info {
@@ -535,11 +546,6 @@ ul {
   font-size: 0.9rem;
 }
 
-.formulier-groep input::-moz-placeholder,
-.formulier-groep textarea::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.5);
-}
-
 .formulier-groep input::placeholder,
 .formulier-groep textarea::placeholder {
   color: rgba(255, 255, 255, 0.5);
@@ -581,7 +587,7 @@ ul {
 }
 
 .footer {
-  background: #757474;
+  background: #1a2942;
   padding: 30px 5%;
   text-align: center;
   display: flex;
@@ -593,7 +599,6 @@ ul {
 .footer-logo {
   height: 40px;
   width: auto;
-  -o-object-fit: contain;
   object-fit: contain;
 }
 
